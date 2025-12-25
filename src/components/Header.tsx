@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import navLogo from "../../assets/images/header/logo.svg";
+import navLogo from "@/assets/images/header/logo.svg";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import useScrollPosition from "../../hook/useScrollPosition";
+import useScrollPosition from "@/hook/useScrollPosition";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +15,13 @@ const Header = () => {
   return (
     // <header className=""
     <header
-      className={`sticky top-0 left-0 w-full z-50 bg-[#F8F8FD] transition-shadow duration-300 ${
-        isScrolled ? "border-b border-gray-200" : ""
-      }`}
+      className={`sticky top-0 left-0 w-full z-50 bg-[#F8F8FD] transition-shadow duration-300 ${isScrolled ? "border-b border-gray-200" : ""
+        }`}
     >
       <nav className="container flex items-center justify-between py-4">
         {/* Logo and Menu */}
         <div className="flex items-center gap-10">
-          <Link className="flex items-center gap-2 cursor-pointer">
+          <Link to='/' className="flex items-center gap-2 cursor-pointer">
             <div className="w-8 h-8 rounded-full bg-slate-600/20">
               <img
                 src={navLogo}
@@ -52,15 +51,15 @@ const Header = () => {
 
         {/* Buttons */}
         <div className="items-center hidden gap-5 md:flex">
-          <button className="flex-shrink-0 text-primaryColor font-semibold px-4 rounded-md hover:bg-primaryColor/10 py-[10px] transition duration-300 text-center">
+          <button className="shrink-0 text-primaryColor font-semibold px-4 rounded-md hover:bg-primaryColor/10 py-[10px] transition duration-300 text-center">
             Login
           </button>
-          <button className="flex-shrink-0 primary-btn">Sign Up</button>
+          <button className="shrink-0 primary-btn">Sign Up</button>
         </div>
 
         {/* Hamburger Menu */}
         <button
-          className="flex md:hidden items-center justify-center w-10 h-10 bg-[#5533ff13] text-base rounded-lg shadow-[0px_0px_5px_#5533ff04_inset] active:border-primaryColor/70 border transition duration-300"
+          className="flex md:hidden items-center justify-center w-10 h-10 bg-[#5533ff13] text-base rounded-lg shadow-[0px_0px_5px_#5533ff04_inset] active:border-primaryColor/70 border transition duration-300 border-gray-300"
           onClick={toggleMenu}
         >
           {isMenuOpen ? (

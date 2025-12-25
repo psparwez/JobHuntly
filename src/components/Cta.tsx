@@ -1,4 +1,5 @@
-import DashboardImage from "../../assets/images/cta/3.1 Dashboard Company.jpg";
+import DashboardImage from "@/assets/images/cta/3.1 Dashboard Company.jpg";
+
 const Cta = () => {
   return (
     <section className="py-10">

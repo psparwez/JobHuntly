@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { jobPosts } from "../../Data/Data.js";
-import SectionText from "../SectionText/SectionText.jsx";
 import { SlHeart } from "react-icons/sl";
 import { IoMdTime } from "react-icons/io";
-import { generateSlug } from "../../utils/index.js";
+import SectionText from "./common/SectionText";
+import { jobPosts } from "@/data";
+import { generateSlug } from "@/lib/utils";
 
 const FeaturedJobs = () => {
   return (
@@ -68,15 +68,14 @@ const FeaturedJobs = () => {
                 <ul className="flex items-center gap-1 mt-5 mb-4">
                   {joblist.role.map((role, index) => (
                     <li
-                      className={` ${
-                        index === 0
-                          ? "bg-[#6a1fff15] text-[#6a1fffd8]"
-                          : index === 1
+                      className={` ${index === 0
+                        ? "bg-[#6a1fff15] text-[#6a1fffd8]"
+                        : index === 1
                           ? "bg-[#16a34a1f] text-[#16a34a]"
                           : index === 2
-                          ? "bg-[#ff832a1f] text-[#ff832ae5]"
-                          : "bg-transparent"
-                      } py-[6px] shrink-0 text-nowrap text-xs  md:text-sm px-3 lg:px-4 rounded-full  font-semibold`}
+                            ? "bg-[#ff832a1f] text-[#ff832ae5]"
+                            : "bg-transparent"
+                        } py-[6px] shrink-0 text-nowrap text-xs  md:text-sm px-3 lg:px-4 rounded-full  font-semibold`}
                       key={index}
                     >
                       {role}
@@ -88,7 +87,7 @@ const FeaturedJobs = () => {
                   {joblist.description}
                 </p>
                 {/* divider  */}
-                <div className="h-[1px] w-full bg-textGrayColor/20 my-6 "></div>
+                <div className="h-px w-full bg-textGrayColor/20 my-6 "></div>
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-sm sm:text-base font-clashDisplay text-textDarkColor/80">
                     ${joblist.salary}{" "}
