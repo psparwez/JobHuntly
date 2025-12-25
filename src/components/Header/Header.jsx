@@ -16,7 +16,7 @@ const Header = () => {
     // <header className=""
     <header
       className={`sticky top-0 left-0 w-full z-50 bg-[#F8F8FD] transition-shadow duration-300 ${
-        isScrolled ? "border-b" : ""
+        isScrolled ? "border-b border-gray-200" : ""
       }`}
     >
       <nav className="container flex items-center justify-between py-4">

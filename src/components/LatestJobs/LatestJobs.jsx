@@ -18,7 +18,7 @@ const LatestJobs = () => {
           <div className="grid grid-cols-1 gap-10 mt-10 md:gap-y-4 md:grid-cols-2 xl:grid-cols-3">
             {latestJobLists.map((joblist) => (
               <div
-                className="flex items-start px-4 py-6 transition duration-300 bg-white border rounded-lg  shadow-2xl shadow-gray-500/10 hover:-translate-y-2 lg:px-6 flex-col min-w-min xs:flex-row gap-4 xs:gap-0"
+                className="flex items-start px-4 py-6 transition duration-300 bg-white border border-gray-300 rounded-lg  shadow-2xl shadow-gray-500/10 hover:-translate-y-2 lg:px-6 flex-col min-w-min xs:flex-row gap-4 xs:gap-0"
                 key={joblist.id}
               >
                 <div className="flex items-center justify-center flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 mr-4 bg-white rounded-md sm:rounded-full shadow-sm ring-1 ring-gray-100">

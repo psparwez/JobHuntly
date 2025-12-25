@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.js";
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --font-redHatDisplay: "Red Hat Display", "sans-serif";
+  --font-clashDisplay: "Clash Display", "sans-serif";
+}
 
 @font-face {
   font-family: "Clash Display";
@@ -15,8 +20,13 @@ body {
   @apply overflow-x-hidden bg-white selection:bg-primaryColor selection:text-blue-50;
 }
 @layer base {
+  button,
+  a {
+    @apply not-disabled:cursor-pointer;
+  }
+
   .nav-link {
-    @apply text-base font-medium  leading-[25.6px] text-textGrayColor py-2 px-2 h-full inline-block hover:text-primaryColor transition ease-in-out duration-300;
+    @apply text-base font-medium leading-[25.6px] text-textDarkColor py-2 px-2 h-full inline-block hover:text-primaryColor transition ease-in-out duration-300;
   }
   .primary-btn {
     @apply py-[10px] px-5 text-base text-center bg-primaryColor hover:bg-primaryColor/90 transition duration-300 hover:scale-[0.97] text-blue-50 font-bold rounded-md;
@@ -45,4 +55,10 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto;
+  }
 }
