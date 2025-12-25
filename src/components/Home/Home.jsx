@@ -49,7 +49,7 @@ const Home = () => {
           {/* Left Section */}
           <div className="lg:self-start lg:pt-28">
             <div className="relative">
-              <h1 className="text-4xl xl:text-7xl leading-[1.2] font-semibold font-clashDisplay text-textDarkColor mb-9">
+              <h1 className="text-4xl xl:text-7xl leading-none font-semibold font-clashDisplay text-textDarkColor mb-9">
                 Discover more than{" "}
                 <span className="text-secondryColor">5000+ Jobs</span>
               </h1>
@@ -59,7 +59,7 @@ const Home = () => {
                 alt="Vector decoration"
               />
             </div>
-            <p className="text-base leading-7 max-w-[90%] mb-3 text-textGrayColor">
+            <p className="text-base leading-7 max-w-[90%] mb-3 text-gray">
               Great platform for job seekers passionate about startups and
               seeking new career heights.
             </p>
@@ -68,7 +68,7 @@ const Home = () => {
               <div className="flex flex-wrap items-center gap-5 lg:flex-nowrap">
                 {/* Job Title Input */}
                 <div className="flex items-center w-full h-full gap-3 transition duration-300 border-b focus-within:border-primaryColor/70 group border-textGrayColor/20">
-                  <div className="pb-3 transition duration-300 text-textGrayColor group-focus-within:text-primaryColor">
+                  <div className="pb-3 transition duration-300 text- group-focus-within:text-primaryColor">
                     <RiSearchLine size={18} />
                   </div>
                   <input
@@ -107,7 +107,7 @@ const Home = () => {
                         aria-label="Location"
                         className="w-full px-3 pb-2 outline-none cursor-pointer select-none text-textDarkColor"
                       />
-                      <div className="pb-3 text-textGrayColor">
+                      <div className="pb-3 text-gray">
                         <RiArrowDownSLine
                           className={`transition duration-300  ${
                             isDropdownOpen ? "rotate-180 text-primaryColor" : ""
@@ -128,7 +128,7 @@ const Home = () => {
                         {locations.map((location) => (
                           <li
                             key={location}
-                            className="px-3 py-3 text-base border-b cursor-pointer hover:bg-primaryColor/10"
+                            className="px-3 py-3 text-base border-b cursor-pointer hover:bg-primaryColor/10 border-gray-200 hover:border-primaryColor/20"
                             onClick={() => handleLocationSelect(location)}
                           >
                             {location}
@@ -150,7 +150,7 @@ const Home = () => {
                 {popularLists.map((list) => (
                   <span
                     key={list}
-                    className="inline-block px-3 py-1.5 shrink-0 sm:py-2  text-sm font-medium border rounded-lg cursor-pointer sm:mb-0 text-textGrayColor/70 backdrop-blur-sm border-textGrayColor/10 hover:bg-blue-100/20"
+                    className="inline-block px-3 py-1.5 shrink-0 sm:py-2  text-sm font-medium border rounded-lg cursor-pointer sm:mb-0 text-textGrayColor/70 backdrop-blur-sm border-gray/10 hover:bg-blue-100/20"
                   >
                     {list}
                   </span>
