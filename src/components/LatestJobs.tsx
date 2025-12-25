@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { latestJobLists } from "../../Data/Data.js";
-import Pattern from "../../assets/images/latest-jobs/Pattern.svg";
-import SectionText from "../SectionText/SectionText.jsx";
-import { generateSlug } from "../../utils/index.js";
+import Pattern from "@/assets/images/latest-jobs/Pattern.svg";
+import { generateSlug } from "@/lib/utils";
+import { latestJobLists } from "@/data";
+import SectionText from "./common/SectionText";
+
 const LatestJobs = () => {
   return (
     <section className="py-20">
@@ -54,13 +55,12 @@ const LatestJobs = () => {
                       {joblist.jobFields.map((jobfield, index) => (
                         <div key={index}>
                           <div
-                            className={` select-none border py-[4px] px-[10px] rounded-full text-sm ${
-                              index === 0
-                                ? " border-[#ffb93637] bg-[#ffb9360f] text-[#FFB836] "
-                                : index === 1
+                            className={` select-none border py-[4px] px-[10px] rounded-full text-sm ${index === 0
+                              ? " border-[#ffb93637] bg-[#ffb9360f] text-[#FFB836] "
+                              : index === 1
                                 ? " border-[#4540de1c] bg-[#4540de0f]  text-[#4540deda]"
                                 : ""
-                            }`}
+                              }`}
                           >
                             {jobfield.name}
                           </div>

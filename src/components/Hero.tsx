@@ -1,16 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 import { RiSearchLine, RiArrowDownSLine } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
-import HeroImage from "../../assets/images/Home/hero-image.png";
-import Vector from "../../assets/images/Home/vector.svg";
-import Pattern from "../../assets/images/Home/Pattern.svg";
+import HeroImage from "@/assets/images/Home/hero-image.png";
+import Vector from "@/assets/images/Home/vector.svg";
+import Pattern from "@/assets/images/Home/Pattern.svg";
 
 const popularLists = ["UI Designer", "UX Researcher", "Android", "Admin"];
 
-const Home = () => {
+const Hero = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("India, Delhi");
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const locations = [
     "Mumbai, Maharashtra",
@@ -24,14 +24,14 @@ const Home = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLocationSelect = (location) => {
+  const handleLocationSelect = (location: string) => {
     setSelectedLocation(location);
     setIsDropdownOpen(false);
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: any) => {
+      if (dropdownRef.current && !dropdownRef.current?.contains(event.target)) {
         setIsDropdownOpen(false);
       }
     };
@@ -79,18 +79,16 @@ const Home = () => {
                 </div>
                 {/* Location Input */}
                 <div
-                  className={` relative flex items-center w-full h-full border-b transition duration-300 ${
-                    isDropdownOpen
-                      ? "border-primaryColor"
-                      : "border-textGrayColor/20"
-                  } `}
+                  className={` relative flex items-center w-full h-full border-b transition duration-300 ${isDropdownOpen
+                    ? "border-primaryColor"
+                    : "border-textGrayColor/20"
+                    } `}
                 >
                   <div
-                    className={`pb-3 ${
-                      isDropdownOpen
-                        ? "text-primaryColor"
-                        : "text-textGrayColor"
-                    }`}
+                    className={`pb-3 ${isDropdownOpen
+                      ? "text-primaryColor"
+                      : "text-textGrayColor"
+                      }`}
                   >
                     <SlLocationPin size={18} />
                   </div>
@@ -109,20 +107,18 @@ const Home = () => {
                       />
                       <div className="pb-3 text-gray">
                         <RiArrowDownSLine
-                          className={`transition duration-300  ${
-                            isDropdownOpen ? "rotate-180 text-primaryColor" : ""
-                          }`}
+                          className={`transition duration-300  ${isDropdownOpen ? "rotate-180 text-primaryColor" : ""
+                            }`}
                         />
                       </div>
                     </div>
 
                     {/* Dropdown lists */}
                     <div
-                      className={`absolute left-0 w-full bg-white shadow-xl transition-all duration-300 ease-in-out ${
-                        isDropdownOpen
-                          ? "bottom-[70px] opacity-100 pointer-events-auto"
-                          : "bottom-[30px] opacity-0 pointer-events-none"
-                      } overflow-hidden`}
+                      className={`absolute left-0 w-full bg-white shadow-xl transition-all duration-300 ease-in-out ${isDropdownOpen
+                        ? "bottom-[70px] opacity-100 pointer-events-auto"
+                        : "bottom-[30px] opacity-0 pointer-events-none"
+                        } overflow-hidden`}
                     >
                       <ul className="px-4 py-5">
                         {locations.map((location) => (
@@ -178,4 +174,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;

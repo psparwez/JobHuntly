@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/Footer/Logo 2.svg";
-import { footerLinks } from "../../Data/Data.js";
-
-// social lists
+import Logo from "@/assets/images/Footer/Logo 2.svg";
 
 import {
   RiFacebookFill,
@@ -11,6 +8,7 @@ import {
   RiLinkedinFill,
   RiTwitterFill,
 } from "react-icons/ri";
+import { footerLinks } from "@/data";
 
 const socialLists = [
   {
@@ -52,7 +50,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* left  */}
           <div className="">
-            <Link>
+            <Link to='/'>
               <img src={Logo} alt="Logo" className="" />
             </Link>
             <p className="text-base w-5/6 mt-5 text-[#D6DDEB] ">

@@ -1,13 +1,19 @@
 // categories
 
-import Icon1 from ".././assets/images/categories/Icon1.jpg";
-import Icon2 from ".././assets/images/categories/Icon2.jpg";
-import Icon3 from ".././assets/images/categories/Icon3.svg";
-import Icon4 from ".././assets/images/categories/Icon4.jpg";
-import Icon5 from ".././assets/images/categories/Icon5.jpg";
-import Icon6 from ".././assets/images/categories/Icon6.jpg";
-import Icon7 from ".././assets/images/categories/Icon7.jpg";
-import Icon8 from ".././assets/images/categories/Icon.jpg";
+import Icon1 from "@/assets/images/categories/Icon1.jpg";
+import Icon2 from "@/assets/images/categories/Icon2.jpg";
+import Icon3 from "@/assets/images/categories/Icon3.svg";
+import Icon4 from "@/assets/images/categories/Icon4.jpg";
+import Icon5 from "@/assets/images/categories/Icon5.jpg";
+import Icon6 from "@/assets/images/categories/Icon6.jpg";
+import Icon7 from "@/assets/images/categories/Icon7.jpg";
+import Icon8 from "@/assets/images/categories/Icon.jpg";
+
+import brand1 from "@/assets/images/brands/brand1.png";
+import brand2 from "@/assets/images/brands/brand2.png";
+import brand3 from "@/assets/images/brands/brand3.png";
+import brand4 from "@/assets/images/brands/brand4.png";
+import brand5 from "@/assets/images/brands/brand5.png";
 
 export const categories = [
   {
@@ -60,13 +66,21 @@ export const categories = [
   },
 ];
 
+export const brands = [
+  { name: "Vodafone image", image: brand1 },
+  { name: "Intel image", image: brand2 },
+  { name: "Tesla image ", image: brand3 },
+  { name: "AMD image", image: brand4 },
+  { name: "Talkit image", image: brand5 },
+];
+
 // jobPosts
-import JobPost1 from ".././assets/images/featured-jobs/meta.png";
-import JobPost2 from ".././assets/images/featured-jobs/netflix.png";
-import JobPost3 from ".././assets/images/featured-jobs/microsoft.png";
-import JobPost4 from ".././assets/images/featured-jobs/reddit.png";
-import JobPost5 from ".././assets/images/featured-jobs/google.png";
-import JobPost6 from ".././assets/images/featured-jobs/spotify.png";
+import JobPost1 from "@/assets/images/featured-jobs/meta.png";
+import JobPost2 from "@/assets/images/featured-jobs/netflix.png";
+import JobPost3 from "@/assets/images/featured-jobs/microsoft.png";
+import JobPost4 from "@/assets/images/featured-jobs/reddit.png";
+import JobPost5 from "@/assets/images/featured-jobs/google.png";
+import JobPost6 from "@/assets/images/featured-jobs/spotify.png";
 
 export const jobPosts = [
   {
@@ -145,14 +159,14 @@ export const jobPosts = [
 
 // latest jobs
 
-import companyImage1 from ".././assets/images/latest-jobs/company.jpg";
-import companyImage2 from ".././assets/images/latest-jobs/company2.jpg";
-import companyImage3 from ".././assets/images/latest-jobs/company3.jpg";
-import companyImage4 from ".././assets/images/latest-jobs/company4.jpg";
-import companyImage5 from ".././assets/images/latest-jobs/company5.jpg";
-import companyImage6 from ".././assets/images/latest-jobs/company6.jpg";
-import companyImage7 from ".././assets/images/latest-jobs/company7.jpg";
-import companyImage8 from ".././assets/images/latest-jobs/company8.jpg";
+import companyImage1 from "@/assets/images/latest-jobs/company.jpg";
+import companyImage2 from "@/assets/images/latest-jobs/company2.jpg";
+import companyImage3 from "@/assets/images/latest-jobs/company3.jpg";
+import companyImage4 from "@/assets/images/latest-jobs/company4.jpg";
+import companyImage5 from "@/assets/images/latest-jobs/company5.jpg";
+import companyImage6 from "@/assets/images/latest-jobs/company6.jpg";
+import companyImage7 from "@/assets/images/latest-jobs/company7.jpg";
+import companyImage8 from "@/assets/images/latest-jobs/company8.jpg";
 
 export const latestJobLists = [
   {

@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
-import PropTypes from "prop-types";
 
-const SectionText = ({ title, subTitle, ctaName }) => {
+interface SectionTextProps {
+  title: string
+  subTitle: string
+  ctaName: string
+}
+
+const SectionText = ({ title, subTitle, ctaName }: SectionTextProps) => {
   return (
     <div className="flex items-center justify-between w-full">
       <h2 className="text-2xl font-semibold lg:text-5xl text-textDarkColor font-clashDisplay">
@@ -18,12 +23,6 @@ const SectionText = ({ title, subTitle, ctaName }) => {
       </Link>
     </div>
   );
-};
-
-SectionText.propTypes = {
-  title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
-  ctaName: PropTypes.string.isRequired,
 };
 
 export default SectionText;
