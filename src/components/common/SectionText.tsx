@@ -1,25 +1,25 @@
-import { Link } from "react-router-dom";
-import { GoArrowRight } from "react-icons/go";
+import { Link } from 'react-router-dom';
+import { GoArrowRight } from 'react-icons/go';
 
 interface SectionTextProps {
-  title: string
-  subTitle: string
-  ctaName: string
+  title: string;
+  subTitle: string;
+  ctaName: string;
 }
 
 const SectionText = ({ title, subTitle, ctaName }: SectionTextProps) => {
   return (
-    <div className="flex items-center justify-between w-full">
-      <h2 className="text-2xl font-semibold lg:text-5xl text-textDarkColor font-clashDisplay">
+    <div className="flex w-full items-center justify-between">
+      <h2 className="font-clashDisplay text-2xl font-semibold text-textDarkColor lg:text-5xl">
         {title}
-        <span className="text-secondryColor "> {subTitle}</span>
+        <span className="text-secondryColor"> {subTitle}</span>
       </h2>
       <Link
         to="all-jobs"
-        className="flex group items-center gap-[5px] font-semibold md:text-base text-sm text-nowrap text-primaryColor transition duration-300"
+        className="group flex items-center gap-[5px] text-sm font-semibold text-nowrap text-primaryColor transition duration-300 md:text-base"
       >
         {ctaName}
-        <GoArrowRight className="transition duration-300 group-hover:translate-x-1 size-5" />
+        <GoArrowRight className="size-5 transition duration-300 group-hover:translate-x-1" />
       </Link>
     </div>
   );
