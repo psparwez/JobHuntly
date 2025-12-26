@@ -1,21 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-@config "../tailwind.config.js";
-@import "tailwindcss";
+@config '../tailwind.config.js';
+@import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 
 @theme {
-  --font-redHatDisplay: "Red Hat Display", "sans-serif";
-  --font-clashDisplay: "Clash Display", "sans-serif";
+  --font-redHatDisplay: 'Red Hat Display', 'sans-serif';
+  --font-clashDisplay: 'Clash Display', 'sans-serif';
 }
 
 @font-face {
-  font-family: "Clash Display";
-  src: url("/Fonts/TTF/ClashDisplay-Variable.ttf");
+  font-family: 'Clash Display';
+  src: url('/Fonts/TTF/ClashDisplay-Variable.ttf');
 }
 
 body {
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
 
   @apply overflow-x-hidden bg-white selection:bg-primaryColor selection:text-blue-50;
 }
@@ -26,10 +26,10 @@ body {
   }
 
   .nav-link {
-    @apply text-base font-medium leading-[25.6px] text-textDarkColor py-2 px-2 h-full inline-block hover:text-primaryColor transition ease-in-out duration-300;
+    @apply inline-block h-full px-2 py-2 text-base leading-[25.6px] font-medium text-textDarkColor transition duration-300 ease-in-out hover:text-primaryColor;
   }
   .primary-btn {
-    @apply py-[10px] px-5 text-base text-center bg-primaryColor hover:bg-primaryColor/90 transition duration-300 hover:scale-[0.97] text-blue-50 font-bold rounded-md;
+    @apply rounded-md bg-primaryColor px-5 py-[10px] text-center text-base font-bold text-blue-50 transition duration-300 hover:scale-[0.97] hover:bg-primaryColor/90;
   }
 }
 button {

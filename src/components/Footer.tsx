@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Logo from "@/assets/images/Footer/Logo 2.svg";
+import { Link } from 'react-router-dom';
+import Logo from '@/assets/images/Footer/Logo 2.svg';
 
 import {
   RiFacebookFill,
@@ -7,53 +7,53 @@ import {
   RiDribbbleLine,
   RiLinkedinFill,
   RiTwitterFill,
-} from "react-icons/ri";
-import { footerLinks } from "@/data";
+} from 'react-icons/ri';
+import { footerLinks } from '@/data';
 
 const socialLists = [
   {
     id: 1,
-    name: "Facebook",
+    name: 'Facebook',
     icon: <RiFacebookFill />,
-    url: "https://www.facebook.com",
+    url: 'https://www.facebook.com',
   },
   {
     id: 2,
-    name: "Instagram",
+    name: 'Instagram',
     icon: <RiInstagramLine />,
-    url: "https://www.instagram.com",
+    url: 'https://www.instagram.com',
   },
   {
     id: 3,
-    name: "Dribbble",
+    name: 'Dribbble',
     icon: <RiDribbbleLine />,
-    url: "https://www.dribbble.com",
+    url: 'https://www.dribbble.com',
   },
   {
     id: 4,
-    name: "LinkedIn",
+    name: 'LinkedIn',
     icon: <RiLinkedinFill />,
-    url: "https://www.linkedin.com",
+    url: 'https://www.linkedin.com',
   },
   {
     id: 5,
-    name: "Twitter",
+    name: 'Twitter',
     icon: <RiTwitterFill />,
-    url: "https://www.twitter.com",
+    url: 'https://www.twitter.com',
   },
 ];
 
 const Footer = () => {
   return (
-    <footer className="py-20 pb-10 bg-textLightDarkColor">
+    <footer className="bg-textLightDarkColor py-20 pb-10">
       <div className="container">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* left  */}
           <div className="">
-            <Link to='/'>
+            <Link to="/">
               <img src={Logo} alt="Logo" className="" />
             </Link>
-            <p className="text-base w-5/6 mt-5 text-[#D6DDEB] ">
+            <p className="mt-5 w-5/6 text-base text-[#D6DDEB]">
               Great platform for the job seeker that passionate about startups.
               Find your dream job easier.
             </p>
@@ -62,7 +62,7 @@ const Footer = () => {
           <div className="flex items-start justify-start sm:justify-evenly">
             {footerLinks.map((section) => (
               <div key={section.title} className="mr-10 sm:mr-0">
-                <h3 className="font-semibold text-[18px] text-blue-50/90 mb-4">
+                <h3 className="mb-4 text-[18px] font-semibold text-blue-50/90">
                   {section.title}
                 </h3>
                 <ul className="space-y-2">
@@ -70,7 +70,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <Link
                         to={link.url}
-                        className="text-[#d6ddeb91] font-normal text-base text-left hover:text-primaryColor hover:translate-x-2  duration-300 transition inline-block select-none"
+                        className="inline-block text-left text-base font-normal text-[#d6ddeb91] transition duration-300 select-none hover:translate-x-2 hover:text-primaryColor"
                       >
                         {link.name}
                       </Link>
@@ -82,20 +82,23 @@ const Footer = () => {
           </div>
           {/* right  */}
           <div className="">
-            <h3 className="font-semibold text-[18px] text-blue-50/90 mb-3">
+            <h3 className="mb-3 text-[18px] font-semibold text-blue-50/90">
               Get job notifications
             </h3>
-            <p className="w-10/12 mb-5 text-gray-200/70">
+            <p className="mb-5 w-10/12 text-gray-200/70">
               The latest job news, articles, sent to your inbox weekly
             </p>
-            <form action="" className="w-full ">
-              <div className="flex items-center w-full h-12 gap-4 overflow-hidden">
+            <form action="" className="w-full">
+              <div className="flex h-12 w-full items-center gap-4 overflow-hidden">
                 <input
                   type="text"
-                  className="w-full h-full p-4 text-base border-none rounded-sm outline-none bg-blue-50 text-textDarkColor"
+                  className="h-full w-full rounded-sm border-none bg-blue-50 p-4 text-base text-textDarkColor outline-none"
                   placeholder="Email Address "
                 />
-                <button className="py-3 transition duration-300 hover:scale-[1.056] rounded-sm px-6 bg-primaryColor text-blue-50">
+                <button
+                  className="rounded-sm bg-primaryColor px-6 py-3 text-blue-50 transition duration-300 hover:scale-[1.056]"
+                  type="button"
+                >
                   Subscribe
                 </button>
               </div>
@@ -103,14 +106,14 @@ const Footer = () => {
           </div>
         </div>
         {/* bottom  */}
-        <div className="flex flex-wrap items-center justify-between gap-5 pt-10 mt-10 border-t border-gray-600/60">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-gray-600/60 pt-10">
           <p
-            className="text-sm sm:text-base text-gray-300/70"
+            className="text-sm text-gray-300/70 sm:text-base"
             title="Created by @Ps Parwez"
           >
             &copy; {new Date().getFullYear()} JobHuntly. All rights reserved.
           </p>
-          <ul className="flex items-center gap-2 ">
+          <ul className="flex items-center gap-2">
             {socialLists.map((social) => (
               <li key={social.id}>
                 <Link
@@ -118,7 +121,7 @@ const Footer = () => {
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center text-sm transition duration-300 rounded-full cursor-pointer sm:text-base w-7 h-7 sm:w-8 sm:h-8 hover:bg-primaryColor text-white/80 bg-white/10"
+                  className="inline-flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white/10 text-sm text-white/80 transition duration-300 hover:bg-primaryColor sm:h-8 sm:w-8 sm:text-base"
                 >
                   {social.icon}
                 </Link>

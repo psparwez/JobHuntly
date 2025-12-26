@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 export default function useScrollPosition(threshold: number = 50) {
   const [scrolled, setScrolled] = useState(false);
@@ -14,10 +14,11 @@ export default function useScrollPosition(threshold: number = 50) {
   }, [threshold]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     handleScroll();
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [handleScroll]);
 

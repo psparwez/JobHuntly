@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import Pattern from "@/assets/images/latest-jobs/Pattern.svg";
-import { generateSlug } from "@/lib/utils";
-import { latestJobLists } from "@/data";
-import SectionText from "./common/SectionText";
+import { Link } from 'react-router-dom';
+import Pattern from '@/assets/images/latest-jobs/Pattern.svg';
+import { generateSlug } from '@/lib/utils';
+import { latestJobLists } from '@/data';
+import SectionText from './common/SectionText';
 
 const LatestJobs = () => {
   return (
     <section className="py-20">
-      <div className="container relative overflow-x-hidden">
+      <div className="relative container overflow-x-hidden">
         <div className="">
           <SectionText
             title="Latest"
@@ -16,16 +16,16 @@ const LatestJobs = () => {
           />
 
           {/* lists  */}
-          <div className="grid grid-cols-1 gap-10 mt-10 md:gap-y-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-y-4 xl:grid-cols-3">
             {latestJobLists.map((joblist) => (
               <div
-                className="flex items-start px-4 py-6 transition duration-300 bg-white border border-gray-300 rounded-lg  shadow-2xl shadow-gray-500/10 hover:-translate-y-2 lg:px-6 flex-col min-w-min xs:flex-row gap-4 xs:gap-0"
+                className="flex min-w-min flex-col items-start gap-4 rounded-lg border border-gray-300 bg-white px-4 py-6 shadow-2xl shadow-gray-500/10 transition duration-300 hover:-translate-y-2 xs:flex-row xs:gap-0 lg:px-6"
                 key={joblist.id}
               >
-                <div className="flex items-center justify-center flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 mr-4 bg-white rounded-md sm:rounded-full shadow-sm ring-1 ring-gray-100">
+                <div className="mr-4 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-md bg-white shadow-sm ring-1 ring-gray-100 sm:rounded-full lg:h-16 lg:w-16">
                   <img
                     src={joblist.logo}
-                    className="flex-shrink-0 object-cover w-8 lg:w-10"
+                    className="w-8 flex-shrink-0 object-cover lg:w-10"
                     alt={joblist.companyName}
                   />
                 </div>
@@ -34,7 +34,7 @@ const LatestJobs = () => {
                     to={`${generateSlug(joblist.title)}`}
                     className="transition duration-300 select-none hover:text-primaryColor"
                   >
-                    <h3 className="mb-1 text-lg sm:text-xl font-semibold">
+                    <h3 className="mb-1 text-lg font-semibold sm:text-xl">
                       {joblist.title}
                     </h3>
                   </Link>
@@ -42,25 +42,26 @@ const LatestJobs = () => {
                     {joblist.companyName} <span>{joblist.location}</span>
                   </p>
 
-                  <div className="flex items-center mt-4 *:text-nowrap">
+                  <div className="mt-4 flex items-center *:text-nowrap">
                     <label
                       htmlFor=""
-                      className="px-[10px] text-xs py-[4px] lg:text-sm border border-[#56cdad29] select-none text-[#56CDAD] rounded-full bg-[#56CDAD1A]"
+                      className="rounded-full border border-[#56cdad29] bg-[#56CDAD1A] px-[10px] py-[4px] text-xs text-[#56CDAD] select-none lg:text-sm"
                     >
                       {joblist.JobType}
                     </label>
-                    <div className="h-7 w-[1px] bg-gray-200 mx-2 block"></div>
+                    <div className="mx-2 block h-7 w-[1px] bg-gray-200"></div>
 
                     <div className="flex items-center gap-2">
                       {joblist.jobFields.map((jobfield, index) => (
                         <div key={index}>
                           <div
-                            className={` select-none border py-[4px] px-[10px] rounded-full text-sm ${index === 0
-                              ? " border-[#ffb93637] bg-[#ffb9360f] text-[#FFB836] "
-                              : index === 1
-                                ? " border-[#4540de1c] bg-[#4540de0f]  text-[#4540deda]"
-                                : ""
-                              }`}
+                            className={`rounded-full border px-[10px] py-[4px] text-sm select-none ${
+                              index === 0
+                                ? 'border-[#ffb93637] bg-[#ffb9360f] text-[#FFB836]'
+                                : index === 1
+                                  ? 'border-[#4540de1c] bg-[#4540de0f] text-[#4540deda]'
+                                  : ''
+                            }`}
                           >
                             {jobfield.name}
                           </div>
@@ -77,7 +78,7 @@ const LatestJobs = () => {
         <img
           src={Pattern}
           alt="Pattern"
-          className="absolute top-0 object-contain opacity-10 w-[450px] h-full right-10 -z-10"
+          className="absolute top-0 right-10 -z-10 h-full w-[450px] object-contain opacity-10"
         />
       </div>
     </section>

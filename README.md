@@ -7,7 +7,6 @@
 
 [![Live Demo](https://img.shields.io/badge/-Live%20Demo-4640DE?style=for-the-badge&logo=vercel&logoColor=white)](https://job-huntly-five.vercel.app/)
 
-
 <br />
 </div>
 
@@ -22,15 +21,14 @@
     <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router" />
     <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
 
-
   </div>
   <br/>
 
 # 🚀 Project Overview
+
 **JobHuntly** Landing Page is a modern, responsive website designed as the front face for a job-search platform. It provides an engaging user experience for job seekers passionate about startups and those looking for new career opportunities.
 
 The landing page features smooth scrolling, dynamic job categories, trusted company highlights, and a professional, user-friendly design built using React, React Router, and Lenis for smooth animations.
-
 
 ## 🌟 Features
 
@@ -49,10 +47,9 @@ The landing page features smooth scrolling, dynamic job categories, trusted comp
 - Lenis: Smooth scrolling library for improved scroll performance.
 - Tailwind CSS: Styling the components.
 
-
 ## 🚀 Getting Started
-To view and run this project locally, follow these steps:
 
+To view and run this project locally, follow these steps:
 
 ### Prerequisites
 
@@ -66,22 +63,23 @@ Before starting, make sure you have the following installed:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/psparwez/JobHuntly.git
-    ```
+   ```bash
+   git clone https://github.com/psparwez/JobHuntly.git
+   ```
 
 2. **Navigate to the project folder:**
 
-    ```bash
-    cd JobHuntly
-    ```
+   ```bash
+   cd JobHuntly
+   ```
 
 3. **Install the project dependencies using npm:**
 
-    ```bash
-    npm install
-    ```
-4. **Running the Project :** 
+   ```bash
+   npm install
+   ```
+
+4. **Running the Project :**
 
 ```bash
 npm run dev
@@ -89,11 +87,9 @@ npm run dev
 
 5. Open [http://localhost:5173/](http://localhost:5173/) in your browser to view the project.
 
-
 You’re now ready to explore and customize **JobHuntly** locally!
 
 ---
-
 
 ### 📜 License
 

@@ -1,11 +1,11 @@
-import NotFound from "@/components/NotFound";
-import RootLayout from "@/layouts/RootLayout";
-import HomePage from "@/pages/Home";
-import { createBrowserRouter } from "react-router-dom";
+import NotFound from '@/components/NotFound';
+import RootLayout from '@/layouts/RootLayout';
+import HomePage from '@/pages/Home';
+import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "*",
+        path: '*',
         element: <NotFound />,
       },
     ],
