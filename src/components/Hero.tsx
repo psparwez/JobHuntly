@@ -5,7 +5,6 @@ import HeroImage from '@/assets/images/Home/hero-image.png';
 import Vector from '@/assets/images/Home/vector.svg';
 import Pattern from '@/assets/images/Home/Pattern.svg';
 import { cn } from '@/lib/utils';
-import { createPortal } from 'react-dom';
 
 const popularLists = ['UI Designer', 'UX Researcher', 'Android', 'Admin'];
 
@@ -47,8 +46,6 @@ const Hero = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
-  const locationWrapper = document.querySelector('[data-location]');
 
   return (
     <section className="relative z-10 overflow-x-hidden bg-[#F8F8FD] py-10 pb-0 lg:py-0 lg:pt-5">
@@ -118,7 +115,7 @@ const Hero = () => {
                         value={selectedLocation}
                         readOnly
                         aria-label="Location"
-                        className="w-full cursor-pointer px-3 pb-2 text-textDarkColor outline-none select-none"
+                        className="select-none-custom w-full cursor-pointer px-3 pb-2 text-textDarkColor outline-none"
                       />
                       <div className="text-gray pb-3">
                         <RiArrowDownSLine
@@ -131,35 +128,30 @@ const Hero = () => {
                     </button>
 
                     {/* Dropdown lists */}
-                    {createPortal(
-                      <>
-                        <div
-                          className={cn(
-                            'absolute left-0 w-full overflow-hidden bg-white shadow-xl transition-all duration-300 ease-in-out',
-                            isDropdownOpen
-                              ? 'pointer-events-auto bottom-[70px] opacity-100'
-                              : 'pointer-events-none bottom-[30px] opacity-0'
-                          )}
-                        >
-                          <ul className="px-4 py-5">
-                            {locations.map((location) => (
-                              <li
-                                key={location}
-                                className="cursor-pointer border-b border-gray-200 px-3 py-3 text-base hover:border-primaryColor/20 hover:bg-primaryColor/10"
-                              >
-                                <button
-                                  type="button"
-                                  onClick={() => handleLocationSelect(location)}
-                                >
-                                  {location}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </>,
-                      locationWrapper!
-                    )}
+                    <div
+                      className={cn(
+                        'absolute left-0 w-full overflow-hidden bg-white shadow-xl transition-all duration-300 ease-in-out',
+                        isDropdownOpen
+                          ? 'pointer-events-auto bottom-[70px] opacity-100'
+                          : 'pointer-events-none bottom-[30px] opacity-0'
+                      )}
+                    >
+                      <ul className="px-4 py-5">
+                        {locations.map((location) => (
+                          <li
+                            key={location}
+                            className="cursor-pointer border-b border-gray-200 px-3 py-3 text-base hover:border-primaryColor/20 hover:bg-primaryColor/10"
+                          >
+                            <button
+                              type="button"
+                              onClick={() => handleLocationSelect(location)}
+                            >
+                              {location}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 {/* Search Button */}

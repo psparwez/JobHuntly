@@ -62,3 +62,10 @@ html.lenis body {
     @apply mx-auto;
   }
 }
+
+.select-none-custom {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
