@@ -60,7 +60,7 @@ const Hero = () => {
               </h1>
               <img
                 src={Vector}
-                className="absolute right-10 -bottom-7 w-[200px] lg:w-[250px]"
+                className="absolute right-10 -bottom-7 w-50 lg:w-62.5"
                 alt="Vector decoration"
               />
             </div>
@@ -69,7 +69,7 @@ const Hero = () => {
               seeking new career heights.
             </p>
             {/* Search Bar */}
-            <div className="relative z-20 mx-auto mt-5 max-w-full rounded-lg bg-white px-5 py-10 shadow-xl shadow-gray-400/15 lg:w-full lg:min-w-[800px] lg:py-7">
+            <div className="relative z-20 mx-auto mt-5 max-w-full rounded-lg bg-white px-5 py-10 shadow-xl shadow-gray-400/15 lg:w-full lg:min-w-200 lg:py-7">
               <div className="flex flex-wrap items-center gap-5 lg:flex-nowrap">
                 {/* Job Title Input */}
                 <div className="group flex h-full w-full items-center gap-3 border-b border-textGrayColor/20 transition duration-300 focus-within:border-primaryColor/70">
@@ -109,6 +109,7 @@ const Hero = () => {
                       className="group flex w-full items-center justify-between"
                       onClick={toggleDropdown}
                       type="button"
+                      tabIndex={0}
                     >
                       <input
                         type="text"
@@ -132,19 +133,17 @@ const Hero = () => {
                       className={cn(
                         'absolute left-0 w-full overflow-hidden bg-white shadow-xl transition-all duration-300 ease-in-out',
                         isDropdownOpen
-                          ? 'pointer-events-auto bottom-[70px] opacity-100'
-                          : 'pointer-events-none bottom-[30px] opacity-0'
+                          ? 'pointer-events-auto bottom-17.5 opacity-100'
+                          : 'pointer-events-none bottom-7.5 opacity-0'
                       )}
                     >
-                      <ul className="px-4 py-5">
+                      <ul className="divide-y divide-gray-200 px-4 py-5">
                         {locations.map((location) => (
-                          <li
-                            key={location}
-                            className="cursor-pointer border-b border-gray-200 px-3 py-3 text-base hover:border-primaryColor/20 hover:bg-primaryColor/10"
-                          >
+                          <li key={location} className="w-full">
                             <button
                               type="button"
                               onClick={() => handleLocationSelect(location)}
+                              className="w-full cursor-pointer px-3 py-3 text-base hover:border-primaryColor/20 hover:bg-primaryColor/10"
                             >
                               {location}
                             </button>
@@ -178,10 +177,10 @@ const Hero = () => {
             </div>
           </div>
           {/* Right Section */}
-          <div className="w-full flex-shrink-0">
+          <div className="w-full shrink-0">
             <img
               src={HeroImage}
-              className="mx-auto block w-[300px] lg:mx-0 lg:ml-auto lg:flex xl:w-[450px]"
+              className="mx-auto block w-75 lg:mx-0 lg:ml-auto lg:flex xl:w-[450px]"
               alt="Hero representation"
             />
             <div className="absolute right-0 -bottom-[455px] h-[716px] w-[280px] rotate-[64deg] bg-white" />
@@ -189,7 +188,7 @@ const Hero = () => {
         </div>
         <img
           src={Pattern}
-          className="absolute top-0 right-0 -z-10 w-[860px]"
+          className="absolute top-0 right-0 -z-10 w-215"
           alt="Background pattern"
         />
       </div>
